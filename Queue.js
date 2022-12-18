@@ -30,3 +30,16 @@ class Queue {
     return this.length === 0;
   }
 }
+
+const q = new Queue();
+console.log(q.isEmpty);
+console.log(q.length);
+
+q.enqueue("hello");
+q.enqueue({ a: 1, b: 2 });
+q.enqueue(900);
+console.log(q.elements, "q.elements");
+console.log(q.length);
+console.log(q.peek());
+q.dequeue();
+console.log(`${q.tail} -  ${q.head}`, "length of Queue");
